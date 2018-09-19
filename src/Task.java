@@ -10,23 +10,30 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class Task extends JPanel {
-		
-	private JLabel taskDescription;
-	private JLabel delete;
 	
+	//text to be displayed in this jpanel
+	private JLabel taskDescription;
+
 	public Task (String text) {
 		
 		setLayout(new FlowLayout());
 		
+		//add the text to the jpanel
 		taskDescription = new JLabel(text);
 		add(taskDescription);
 		
-		//set mouse clicking functionality	
+		//set some mouse functionality	
 		addMouseListener(new MouseAdapter() {
 			
+			//fires when the mouse enters the jpanels "universe"
 			public void mouseEntered (MouseEvent e) {
 				System.out.println(taskDescription.getText());
-				//setVisible(false);
+			}
+			
+			//fires when a left click in input in the jpanels "universe"
+			public void mouseClicked (MouseEvent e) {
+				//makes the task disappear when clicked on
+				setVisible(false);
 			}
 			
 		});

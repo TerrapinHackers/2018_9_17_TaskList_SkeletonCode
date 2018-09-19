@@ -11,6 +11,7 @@ public class Driver {
 		TaskFrame container = new TaskFrame (1000,1000,"Task");
 		container.getContentPane().setLayout(new BoxLayout(container.getContentPane(),BoxLayout.Y_AXIS));
 		
+		//add a couple tasks to play around with
 		container.addTask(new Task("test1"));
 		container.addTask(new Task("super duper test"));
 		container.addTask(new Task("test121332"));

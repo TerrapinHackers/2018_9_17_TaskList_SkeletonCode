@@ -1,0 +1,30 @@
+The intent of this project is begin to familiarize you with working with a new technology; in this case Swing/AWT. This framework was chosen, somewhat confusingly, because it is not
+particularily popular or widely used.  In the tech industry, you will often find yourself having to use a framework that you are unfamiliar with.
+
+Swing/AWT is a package included in the standard java library.  The package provides a developer with some basic tools to create dynamic UIs.  To begin, first a JFrame object must be
+instantiated.  A JFrame is essentially just a container in which other objects, known in Swing as components, may be added. The size of the frame, in pixels, must be set and the frame
+ must be set to be visible.  With this frame, any number of sub components may be added.  These sub components may contain other components!  At first this can be confusing; I like 
+ to think of each component as it's own little universe.  Within this universe any number of sub components may be added, but the sub components belong only to that universe and are 
+ bound by it's own coordinates.  This is a good start, but working only with components will create a static app.  To make it react to user input, we need a way to capture user actions
+ and define the procedure that should happen when the input is captured.  In the source code basic mouse interaction is defined.
+ 
+This is an extremely simplified explination of how this works.  I recommend looking over the official guides for the framekwork by following the link below.  They do a far better
+job at explaining the framework than anyone ever could and provide samples to play around with.  
+
+https://docs.oracle.com/javase/tutorial/uiswing/components/index.html
+
+Once you can make sense of the source code, try playing around and see what you come up with!
+
+With software development I find that it is easier to determine what it is you want to make before you go to make it.  This might sound obvious, but many programmers
+(myself included) will dive into a project without even knowing what it is they are trying to accomplish.  Therefore, it is helpful to define what it is you want to make before you
+even begin thinking about how you will implement it.  In other words, start out with an abstract idea of what you want your application to do, determine what will be required to
+perform those ideas, and then determine the concrete way to acheive that idea.
+
+NOTE:  If you are having trouble getting components that you have added to display, make sure that the following methods have are called on the component object
+
+1) component.setVisible(true); making that component visible
+2) component.setSize(any size you want); setting a size for the component so it isn't 0by0
+3) container.add(component);  add the component the top-level container
+
+
+If you don't know where to begin try to implement a way for a user to dynamically add a task.
